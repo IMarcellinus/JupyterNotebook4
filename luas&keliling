@@ -1,10 +1,10 @@
-#fungsi
-def LuasPersegi(sisi):
-    luasP = sisi*sisi
-    return luasP
-def KelilingPersegi(sisi):
-    kelilingP  = 4 * sisi
-    return kelilingP
+#membuat fungsi
+def LuasBujurSangkar(sisi):
+    luasBJ = sisi*sisi
+    return luasBJ
+def KelilingBujurSangkar(sisi):
+    kelilingBJ  = 4 * sisi
+    return kelilingBJ
 def LuasPersegiPanjang(panjang, lebar):
     luasPP = panjang * lebar
     return luasPP
@@ -17,25 +17,24 @@ def LuasSegitiga(alas,tinggi):
 def KelilingSegitiga(sisiA, sisiB, sisiC):
     kelilingS = sisiA + sisiB + sisiC
     return kelilingS
-def LuasLingkaran(r):
-    luasL = 3.14 * r * r
+def LuasLingkaran(jarijari):
+    luasL = 3.14 * jarijari * jarijari
     return luasL
-def KelilingLingkaran(d):
-    kelilingL = 3,14 * d
+def KelilingLingkaran(jarijari):
+    kelilingL = 3.14 * jarijari
     return kelilingL 
 def LuasJajarGenjang(alas,tinggi):
     luasJG = alas * tinggi
     return luasJG
-def KelilingJajarGenjang(sisiA,sisiB):
-    kelilingJG = sisiA * 2 + sisiB * 2
+def KelilingJajarGenjang(alasA,tinggiB):
+    kelilingJG = (alasA + tinggiB) * 2
     return kelilingJG
 
 #PROGRAM UTAMA
-print("==================================== Media Perhitungan Luas & Keliling Bangun Datar ====================================")
-print('')
-print('')
 pilihan = 1
 while pilihan != 0:
+    print("================= Perhitungan Luas & Keliling Bangun Datar =========================")
+    print('')
     print("1. Luas Persegi")
     print("2. Keliling Persegi")
     print("3. Luas Persegi Panjang")
@@ -45,109 +44,87 @@ while pilihan != 0:
     print("7. Luas Lingkaran")
     print("8. Keliling Lingkaran")
     print("9. Luas Jajar Genjang")
-    print("10. Keliling Jajar Genjang")
+    print("10.Keliling Jajar Genjang")
     print("0. Exit")
     print('')
 
-    pilihan = int(input("Masukkan Pilihan anda : "))
-    print('')
-    print('')
+    pilihan = int(input("Masukkan Pilihan Anda:"))
     print('')
 
     if pilihan == 1:
-        print("==================================== Luas Persegi ====================================")
+        print("Luas Bujur Sangkar")
         print('')
-        sisi = float(input("Masukkan Sisi : "))
+        sisi = int(input("Masukkan Sisi: "))
         print('')
+        print("Luas Bujur Sangkar adalah ", LuasBujurSangkar(sisi))
         print('')
-        print("Luas Persegi Adalah ", LuasPersegi(sisi))
+    elif pilihan == 2:
+        print("Keliling Bujur Sangkar")
         print('')
+        sisi = int(input("Masukkan Sisi: "))
         print('')
-    if pilihan == 2:
-        print("==================================== Keliling Persegi ====================================")
+        print("Keliling Bujur Sangkar adalah ", KelilingBujurSangkar(sisi))
+    elif pilihan == 3:
+        print("Luas Persegi Panjang")
         print('')
-        sisi = float(input("Masukkan Sisi : "))
-        print('')
-        print('')
-        print("Keliling Persegi Adalah  ", LuasPersegi(sisi))
-        print('')
-        print('')
-    if pilihan == 3:
-        print("==================================== Luas Persegi Panjang ====================================")
-        print('')
-        panjang = float(input("Masukkan Panjang : "))
-        lebar = float(input("Masukkan Lebar : "))
-        print('')
+        panjang = int(input("Masukkan Panjang : "))
+        lebar = int(input("Masukkan Lebar : "))
         print('')
         print("Luas Persegi Panjang Adalah  ", LuasPersegiPanjang(panjang,lebar))
         print('')
+    elif pilihan == 4:
+        print("Keliling Persegi Panjang")
         print('')
-    if pilihan == 4:
-        print("==================================== Keliling Persegi Panjang ====================================")
-        print('')
-        panjang = float(input("Masukkan Panjang : "))
-        lebar = float(input("Masukkan Lebar : "))
-        print('')
+        panjang = int(input("Masukkan Panjang : "))
+        lebar = int(input("Masukkan Lebar : "))
         print('')
         print("Keliling Persegi Panjang Adalah  ", KelilingPersegiPanjang(panjang,lebar))
         print('')
+    elif pilihan == 5:
+        print("Luas Segitiga")
         print('')
-    if pilihan == 5:
-        print("==================================== Luas Segitiga ====================================")
-        print('')
-        alas = float(input("Masukkan Alas : "))
-        tinggi = float(input("Masukkan Tinggi : "))
-        print('')
+        alas = int(input("Masukkan Alas : "))
+        tinggi = int(input("Masukkan Tinggi : "))
         print('')
         print("Luas Segitiga Adalah ", LuasSegitiga(alas,tinggi))
         print('')
+    elif pilihan == 6:
+        print("Keliling Segitiga")
         print('')
-    if pilihan == 6:
-        print("==================================== Keliling Segitiga ====================================")
-        print('')
-        sisiA = float(input("Masukkan Sisi A : "))
-        sisiB = float(input("Masukkan Sisi B : "))
-        sisiC = float(input("Masukkan Sisi C : "))
-        print('')
+        sisiA = int(input("Masukkan Sisi A : "))
+        sisiB = int(input("Masukkan Sisi B : "))
+        sisiC = int(input("Masukkan Sisi C : "))
         print('')
         print("Keliling Segitiga Adalah ", KelilingSegitiga(sisiA,sisiB,sisiC))
         print('')
+    elif pilihan == 7:
+        print("Luas Lingkaran")
         print('')
-    if pilihan == 7:
-        print("==================================== Luas Lingkaran ====================================")
+        jarijari = float(input("Masukkan Jari - Jari : "))
         print('')
-        r = float(input("Masukkan Jari - Jari : "))
+        print("Luas Lingkaran Adalah  ", LuasLingkaran(jarijari))
+    elif pilihan == 8:
+        print("Keliling Lingkaran")
         print('')
+        jarijari2 = float(input("Masukkan Diameter : "))
         print('')
-        print("Luas Lingkaran Adalah  ", LuasLingkaran(r))
+        print("Keliling Lingkaran Adalah ", KelilingLingkaran(jarijari))
         print('')
+    elif pilihan == 9:
+        print("Luas Jajar Genjang")
         print('')
-    if pilihan == 8:
-        print("==================================== Keliling Lingkaran ====================================")
-        print('')
-        d = float(input("Masukkan Diameter : "))
-        print('')
-        print('')
-        print("Keliling Lingkaran Adalah ", KelilingLingkaran(d))
-        print('')
-        print('')
-    if pilihan == 9:
-        print("==================================== Luas Jarjar Genjang ====================================")
-        print('')
-        alas = float(input("Masukkan Alas : "))
-        tinggi = float(input("Masukkan Tinggi : "))
-        print('')
+        alas = int(input("Masukkan Alas : "))
+        tinggi = int(input("Masukkan Tinggi : "))
         print('')
         print("Luas Jajar Genjang Adalah : ", LuasJajarGenjang(alas,tinggi))
         print('')
+    elif pilihan == 10:
+        print("Keliling Jajar Genjang")
         print('')
-    if pilihan == 10:
-        print("==================================== Keliling Jajar Genjang ====================================")
+        alasA = int(input("Masukkan Alas : "))
+        tinggiB = int(input("Masukkan Sisi  : "))
         print('')
-        sisiA = float(input("Masukkan Sisi A : "))
-        sisiB = float(input("Masukkan Sisi B : "))
-        print('')
-        print('')
-        print("Keliling Jajar Genjang Adalah ", KelilingJajarGenjang(sisiA,sisiB))
+        print("Keliling Jajar Genjang Adalah ", KelilingJajarGenjang(alasA,tinggiB))
         print('')
         print('')
+        break
